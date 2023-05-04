@@ -11,5 +11,11 @@ export function useTelegram() {
       tg.MainButton.show();
     }
   };
-  return { onClose, onToggleButton, tg, user: tg.initDataUnsafe?.user };
+  return {
+    onClose,
+    onToggleButton,
+    tg,
+    user: tg.initDataUnsafe?.user,
+    queryId: tg.initDataUnsafe?.query_id,
+  };
 }
