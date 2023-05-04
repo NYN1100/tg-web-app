@@ -4,12 +4,12 @@ export function useTelegram() {
   const onClose = () => {
     tg.close();
   };
-  const onToogleButton = () => {
+  const onToggleButton = () => {
     if (tg.MainButton.isVisible) {
       tg.MainButton.hide();
     } else {
       tg.MainButton.show();
     }
   };
-  return { onClose, onToogleButton, tg, user: tg.initDataUnsafe?.user };
+  return { onClose, onToggleButton, tg, user: tg.initDataUnsafe?.user };
 }
