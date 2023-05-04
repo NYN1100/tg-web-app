@@ -39,7 +39,7 @@ const Product = () => {
     } else {
       tg.MainButton.show();
       tg.MainButton.setParams({
-        text: `Sotib Olish ${getTotalPrice()}`,
+        text: `Sotib Olish ${getTotalPrice(newItems)}`,
       });
     }
   };
