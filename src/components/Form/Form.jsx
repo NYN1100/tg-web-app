@@ -38,15 +38,7 @@ const Form = () => {
   }, []);
 
   useEffect(() => {
-    if (
-      name.length >= 4 &&
-      age &&
-      weight &&
-      height &&
-      sex &&
-      telNumber.length > 9 &&
-      address
-    ) {
+    if (name && age && weight && height && sex && telNumber && address) {
       tg.MainButton.show();
     } else {
       tg.MainButton.hide();
