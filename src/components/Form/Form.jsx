@@ -98,6 +98,15 @@ const Form = () => {
         />
       </div>
       <div className="input1">
+        <h5>Vazn(kg)</h5>
+        <input
+          className="input"
+          type="number"
+          value={weight}
+          onChange={onChangeWeight}
+        />
+      </div>
+      <div className="input1">
         <h5>Jins</h5>
         <select value={sex} onChange={onChangeSex} className="select">
           <option value="man">Erkak</option>
