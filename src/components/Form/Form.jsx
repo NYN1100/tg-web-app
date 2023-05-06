@@ -44,7 +44,7 @@ const Form = () => {
       weight &&
       height &&
       sex &&
-      telNumber.length === 13 &&
+      telNumber.length > 9 &&
       address
     ) {
       tg.MainButton.show();
@@ -77,56 +77,61 @@ const Form = () => {
   return (
     <div className="form">
       <h3>Ro'yxatdan o'tish</h3>
-      <h5>Ism va Familiya</h5>
-      <input
-        className="input"
-        type="text"
-        placeholder="Aziz Azizov"
-        value={name}
-        onChange={onChangeName}
-      />
-      <h5>Yosh</h5>
-      <input
-        className="input"
-        type="number"
-        value={age}
-        onChange={onChangeAge}
-      />
-      <h5>Vazn(kg)</h5>
-      <input
-        className="input"
-        type="number"
-        value={weight}
-        onChange={onChangeWeight}
-      />
-      <h5>Bo'y(cm)</h5>
-      <input
-        className="input"
-        type="number"
-        value={height}
-        onChange={onChangeHeight}
-      />
-      <h5>Jins</h5>
-      <select value={sex} onChange={onChangeSex} className="select">
-        <option value="man">Erkak</option>
-        <option value="woman">Ayol</option>
-      </select>
-      <h5>Telelfon Raqam</h5>
-      <input
-        className="input"
-        type="number"
-        value={telNumber}
-        placeholder="+998908327777"
-        onChange={onChangeTelNumber}
-      />
-      <h5>Manzil</h5>
-      <input
-        className="input"
-        type="address"
-        placeholder="Katta Ariq (Masalan)"
-        value={address}
-        onChange={onChangeAddress}
-      />
+      <div className="input1">
+        <h5>Ism va Familiya</h5>
+        <input
+          className="input"
+          type="text"
+          placeholder="Aziz Azizov"
+          value={name}
+          onChange={onChangeName}
+        />
+      </div>
+      <div className="input1">
+        <h5>Yosh</h5>
+        <input
+          className="input"
+          type="number"
+          value={age}
+          onChange={onChangeAge}
+        />
+      </div>
+      <div className="input1">
+        <h5>Bo'y(cm)</h5>
+        <input
+          className="input"
+          type="number"
+          value={height}
+          onChange={onChangeHeight}
+        />
+      </div>
+      <div className="input1">
+        <h5>Jins</h5>
+        <select value={sex} onChange={onChangeSex} className="select">
+          <option value="man">Erkak</option>
+          <option value="woman">Ayol</option>
+        </select>
+      </div>
+      <div className="input1">
+        <h5>Telelfon Raqam</h5>
+        <input
+          className="input"
+          type="number"
+          value={telNumber}
+          placeholder="+998908327777"
+          onChange={onChangeTelNumber}
+        />
+      </div>
+      <div className="input1">
+        <h5>Manzil</h5>
+        <input
+          className="input"
+          type="address"
+          placeholder="Katta Ariq"
+          value={address}
+          onChange={onChangeAddress}
+        />
+      </div>
     </div>
   );
 };
