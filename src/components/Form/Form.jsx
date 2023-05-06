@@ -2,19 +2,27 @@ import React, { useCallback, useEffect, useState } from "react";
 import "./Form.css";
 import { useTelegram } from "../../hooks/useTelegram";
 const Form = () => {
-  const [country, setCountry] = useState("");
-  const [street, setStreet] = useState("");
-  const [subject, setSubject] = useState("physical");
+  const [name, setName] = useState("");
+  const [age, setAge] = useState(17);
+  const [weight, setWeight] = useState(60);
+  const [height, setHeight] = useState(170);
+  const [sex, setSex] = useState("Erkak");
+  const [telNumber, setTelNumber] = useState();
+  const [address, setAddress] = useState("Katta Ariq");
   const { tg } = useTelegram();
 
   const onSendData = useCallback(() => {
     const data = {
-      country,
-      street,
-      subject,
+      name,
+      age,
+      weight,
+      height,
+      sex,
+      telNumber,
+      address,
     };
     tg.sendData(JSON.stringify(data));
-  }, [country, street, subject]);
+  }, [name, age, weight, height, sex, telNumber, address]);
 
   useEffect(() => {
     Telegram.WebApp.onEvent("mainButtonClicked", onSendData);
@@ -30,43 +38,87 @@ const Form = () => {
   }, []);
 
   useEffect(() => {
-    if (!street || !country) {
-      tg.MainButton.hide();
-    } else {
+    if (name && age && weight && height && sex && telNumber && address) {
       tg.MainButton.show();
+    } else {
+      tg.MainButton.hide();
     }
-  }, [country, street]);
+  }, [name, age, weight, height, sex, telNumber, address]);
 
-  const onChangeCountry = (e) => {
-    setCountry(e.target.value);
+  const onChangeName = (e) => {
+    setName(e.target.value);
   };
-  const onChangeStreet = (e) => {
-    setStreet(e.target.value);
+  const onChangeAge = (e) => {
+    setAge(e.target.value);
   };
-  const onChangeSub = (e) => {
-    setSubject(e.target.value);
+  const onChangeHeight = (e) => {
+    setHeight(e.target.value);
+  };
+  const onChangeWeight = (e) => {
+    setWeight(e.target.value);
+  };
+  const onChangeSex = (e) => {
+    setSex(e.target.value);
+  };
+  const onChangeTelNumber = (e) => {
+    setTelNumber(e.target.value);
+  };
+  const onChangeAddress = (e) => {
+    setAddress(e.target.value);
   };
   return (
     <div className="form">
-      <h3>Malumaotlaringizni kiriting</h3>
+      <h3>Ro'yxatdan o'tish</h3>
+      <h5>Ism va Familiya</h5>
       <input
         className="input"
         type="text"
-        placeholder="Davlat"
-        value={country}
-        onChange={onChangeCountry}
+        placeholder="Aziz Azizov"
+        value={name}
+        onChange={onChangeName}
       />
+      <h5>Yosh</h5>
       <input
         className="input"
-        type="text"
-        placeholder="Ko'cha"
-        value={street}
-        onChange={onChangeStreet}
+        type="number"
+        value={age}
+        onChange={onChangeAge}
       />
-      <select value={subject} onChange={onChangeSub} className="select">
-        <option value="physical">Jismoniy shaxs</option>
-        <option value="legal">Yuridik shaxs</option>
+      <h5>Vazn(kg)</h5>
+      <input
+        className="input"
+        type="number"
+        value={weight}
+        onChange={onChangeWeight}
+      />
+      <h5>Bo'y(cm)</h5>
+      <input
+        className="input"
+        type="number"
+        value={height}
+        onChange={onChangeHeight}
+      />
+      <h5>Jins</h5>
+      <select value={sex} onChange={onChangeSex} className="select">
+        <option value="man">Erkak</option>
+        <option value="woman">Ayol</option>
       </select>
+      <h5>Telelfon Raqam</h5>
+      <input
+        className="input"
+        type="number"
+        value={telNumber}
+        placeholder="+998908327777"
+        onChange={onChangeTelNumber}
+      />
+      <h5>Manzil</h5>
+      <input
+        className="input"
+        type="address"
+        placeholder="Katta Ariq (Masalan)"
+        value={address}
+        onChange={onChangeAddress}
+      />
     </div>
   );
 };
