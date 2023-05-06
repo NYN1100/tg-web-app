@@ -2,12 +2,23 @@ import React from "react";
 import Button from "../Button/Button";
 import { useTelegram } from "../../hooks/useTelegram";
 import "./Header.css";
+import logo from "./logo.png";
 const Header = () => {
   const { user, onClose } = useTelegram();
   return (
     <div className="header">
-      <Button onClick={onClose}>Yopish</Button>
-      <span className="username">{user?.username}</span>
+      <div className="navbar1">
+        <Button onClick={onClose}>Yopish</Button>
+        <span className="username">{user?.username}</span>
+      </div>
+      <div className="navbar2">
+        <img src={logo} alt="logo" />
+        <h3>Sog'lom Taom</h3>
+        <select>
+          <option value="uz">UZ</option>
+          <option value="ru">RU</option>
+        </select>
+      </div>
     </div>
   );
 };

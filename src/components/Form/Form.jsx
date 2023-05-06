@@ -3,9 +3,9 @@ import "./Form.css";
 import { useTelegram } from "../../hooks/useTelegram";
 const Form = () => {
   const [name, setName] = useState("");
-  const [age, setAge] = useState(0);
-  const [weight, setWeight] = useState(0);
-  const [height, setHeight] = useState(0);
+  const [age, setAge] = useState("");
+  const [weight, setWeight] = useState("");
+  const [height, setHeight] = useState("");
   const [sex, setSex] = useState("Erkak");
   const [telNumber, setTelNumber] = useState();
   const [address, setAddress] = useState("");
@@ -83,6 +83,7 @@ const Form = () => {
         <h5>Yosh</h5>
         <input
           className="input"
+          placeholder="21"
           type="number"
           value={age}
           onChange={onChangeAge}
@@ -92,6 +93,7 @@ const Form = () => {
         <h5>Bo'y(cm)</h5>
         <input
           className="input"
+          placeholder="175"
           type="number"
           value={height}
           onChange={onChangeHeight}
@@ -101,6 +103,7 @@ const Form = () => {
         <h5>Vazn(kg)</h5>
         <input
           className="input"
+          placeholder="60"
           type="number"
           value={weight}
           onChange={onChangeWeight}
