@@ -33,6 +33,7 @@ h5 {
   border: none;
   border-bottom: 1px solid rgba(0, 0, 0, 0.42);
   outline: none;
+  border-radius: 5px;
 }
 .input1 select {
   border: none;
