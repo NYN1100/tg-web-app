@@ -3,12 +3,12 @@ import "./Form.css";
 import { useTelegram } from "../../hooks/useTelegram";
 const Form = () => {
   const [name, setName] = useState("");
-  const [age, setAge] = useState(17);
-  const [weight, setWeight] = useState(60);
-  const [height, setHeight] = useState(170);
+  const [age, setAge] = useState(0);
+  const [weight, setWeight] = useState(0);
+  const [height, setHeight] = useState(0);
   const [sex, setSex] = useState("Erkak");
   const [telNumber, setTelNumber] = useState();
-  const [address, setAddress] = useState("Katta Ariq");
+  const [address, setAddress] = useState("");
   const { tg } = useTelegram();
 
   const onSendData = useCallback(() => {
@@ -38,7 +38,15 @@ const Form = () => {
   }, []);
 
   useEffect(() => {
-    if (name && age && weight && height && sex && telNumber && address) {
+    if (
+      name.length >= 4 &&
+      age &&
+      weight &&
+      height &&
+      sex &&
+      telNumber.length === 13 &&
+      address
+    ) {
       tg.MainButton.show();
     } else {
       tg.MainButton.hide();
