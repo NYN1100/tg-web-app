@@ -39,7 +39,7 @@
 }
 
 .input1 input:focus {
-  border-bottom: 1px solid black;
+  border-bottom: 2px solid black;
 }
 
 .input1 select {
