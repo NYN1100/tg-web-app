@@ -36,6 +36,15 @@
   border-radius: 5px;
   background-color: var(--tg-theme-bg-color);
 }
+
+.input1 input::target-text {
+  color: aqua;
+}
+
+.input1 input:focus {
+  border-bottom: 1px solid black;
+}
+
 .input1 select {
   border: none;
   border-bottom: 1px solid rgba(0, 0, 0, 0.42);
@@ -47,6 +56,6 @@
   color: var(--tg-theme-text-color);
 }
 
-.form input::placeholder {
+.form .input1 input::placeholder {
   color: var(--tg-theme-hint-color);
 }
