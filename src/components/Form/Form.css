@@ -11,17 +11,17 @@
   flex-direction: column;
   padding: 5px 0;
 }
-h3 {
+.form h3 {
   align-self: center;
   padding: 10px;
 }
-h5 {
+.form h5 {
   font-family: "Roboto", sans-serif;
   font-style: normal;
   font-weight: 400;
   display: flex;
   align-items: center;
-  color: rgba(0, 0, 0, 0.6);
+  color: var(--tg-theme-hint-color);
   padding: 8px 0;
 }
 .input1 input {
@@ -41,6 +41,6 @@ h5 {
   outline: none;
 }
 
-input::placeholder {
+.form input::placeholder {
   color: rgba(0, 0, 0, 0.2);
 }

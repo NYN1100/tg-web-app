@@ -1,6 +1,8 @@
 import React from "react";
 import Button from "../Button/Button";
 import { useTelegram } from "../../hooks/useTelegram";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faXmark } from "@fortawesome/free-solid-svg-icons";
 import "./Header.css";
 import logo from "./logo.png";
 const Header = () => {
@@ -8,7 +10,9 @@ const Header = () => {
   return (
     <div className="header">
       <div className="navbar1">
-        <Button onClick={onClose}>Yopish</Button>
+        <Button onClick={onClose}>
+          <FontAwesomeIcon icon={faXmark} />
+        </Button>
         <span className="username">{user?.username}</span>
       </div>
       <div className="navbar2">

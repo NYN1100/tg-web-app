@@ -12,6 +12,8 @@
 .navbar2 {
   display: flex;
   padding: 15px;
+  align-items: center;
+  gap: 10px;
 }
 .navbar2 img {
   width: 50px;
@@ -36,4 +38,5 @@
   margin-left: 100px;
   border: 1px solid rgba(255, 255, 255, 0.61);
   border-radius: 4px;
+  color: white;
 }
