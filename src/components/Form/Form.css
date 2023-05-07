@@ -34,11 +34,8 @@
   border-bottom: 1px solid rgba(0, 0, 0, 0.42);
   outline: none;
   border-radius: 5px;
+  color: var(--tg-theme-text-color);
   background-color: var(--tg-theme-bg-color);
-}
-
-.input1 input::target-text {
-  color: aqua;
 }
 
 .input1 input:focus {
