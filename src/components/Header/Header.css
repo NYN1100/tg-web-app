@@ -9,6 +9,15 @@
   margin-left: auto;
 }
 
+.navbar1 {
+  display: flex;
+  align-items: flex-start;
+}
+
+.iconX {
+  font-size: 20px;
+}
+
 .navbar2 {
   display: flex;
   padding: 15px;

@@ -11,7 +11,7 @@ const Header = () => {
     <div className="header">
       <div className="navbar1">
         <Button onClick={onClose}>
-          <FontAwesomeIcon icon={faXmark} />
+          <FontAwesomeIcon className="iconX" icon={faXmark} />
         </Button>
         <span className="username">{user?.username}</span>
       </div>
