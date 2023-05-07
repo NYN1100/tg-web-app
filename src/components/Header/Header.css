@@ -9,6 +9,10 @@
   margin-left: auto;
 }
 
+.navbar {
+  padding-bottom: 15px;
+}
+
 .navbar1 {
   display: flex;
   align-items: flex-start;

@@ -14,7 +14,7 @@ const App = () => {
 
   return (
     <div className="App">
-      <Header />
+      <Header className="header" />
       <Routes>
         <Route index element={<ProductList />} />
         <Route path="form" element={<Form />} />

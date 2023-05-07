@@ -8,20 +8,22 @@ import logo from "./logo.png";
 const Header = () => {
   const { user, onClose } = useTelegram();
   return (
-    <div className="header">
-      <div className="navbar1">
-        <Button onClick={onClose}>
-          <FontAwesomeIcon className="iconX" icon={faXmark} />
-        </Button>
-        <span className="username">{user?.username}</span>
-      </div>
-      <div className="navbar2">
-        <img src={logo} alt="logo" />
-        <h3>Sog'lom Taom</h3>
-        <select>
-          <option value="uz">UZ</option>
-          <option value="ru">RU</option>
-        </select>
+    <div className="navbar">
+      <div className="header">
+        <div className="navbar1">
+          <Button onClick={onClose}>
+            <FontAwesomeIcon className="iconX" icon={faXmark} />
+          </Button>
+          <span className="username">{user?.username}</span>
+        </div>
+        <div className="navbar2">
+          <img src={logo} alt="logo" />
+          <h3>Sog'lom Taom</h3>
+          <select>
+            <option value="uz">UZ</option>
+            <option value="ru">RU</option>
+          </select>
+        </div>
       </div>
     </div>
   );
