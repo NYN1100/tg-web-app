@@ -43,6 +43,10 @@
   background-color: var(--tg-theme-bg-color);
 }
 
+.input1 select option {
+  color: var(--tg-theme-text-color);
+}
+
 .form input::placeholder {
   color: var(--tg-theme-hint-color);
 }
