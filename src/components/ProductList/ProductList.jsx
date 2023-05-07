@@ -2,16 +2,65 @@ import React, { useState } from "react";
 import "./ProductList.css";
 import ProductItem from "../ProductItem/ProductItem";
 import { useTelegram } from "../../hooks/useTelegram";
+import salad from "./salad.jpg";
 
 const products = [
-  { id: "1", title: "Jinsi", price: 5000, description: "Ko'k rang" },
-  { id: "2", title: "Kurtka", price: 3000, description: "Oq rang" },
-  { id: "3", title: "Jinsi 2", price: 1000, description: "Yashil rang" },
-  { id: "4", title: "Kurtka 8", price: 6000, description: "Havorang" },
-  { id: "5", title: "Jinsi 3", price: 7800, description: "Qora rang" },
-  { id: "6", title: "Kurtka 7", price: 12000, description: "Ko'k rang" },
-  { id: "7", title: "Jinsi 4", price: 5100, description: "Pushti rang" },
-  { id: "8", title: "Kurtka 5", price: 8000, description: "Qizil rang" },
+  {
+    id: "1",
+    title: "Jinsi",
+    price: 5000,
+    description: "Ko'k rang",
+    img: "./salad.jpg",
+  },
+  {
+    id: "2",
+    title: "Kurtka",
+    price: 3000,
+    description: "Oq rang",
+    img: "./salad.jpg",
+  },
+  {
+    id: "3",
+    title: "Jinsi 2",
+    price: 1000,
+    description: "Yashil rang",
+    img: "./salad.jpg",
+  },
+  {
+    id: "4",
+    title: "Kurtka 8",
+    price: 6000,
+    description: "Havorang",
+    img: "./salad.jpg",
+  },
+  {
+    id: "5",
+    title: "Jinsi 3",
+    price: 7800,
+    description: "Qora rang",
+    img: "./salad.jpg",
+  },
+  {
+    id: "6",
+    title: "Kurtka 7",
+    price: 12000,
+    description: "Ko'k rang",
+    img: "./salad.jpg",
+  },
+  {
+    id: "7",
+    title: "Jinsi 4",
+    price: 5100,
+    description: "Pushti rang",
+    img: "./salad.jpg",
+  },
+  {
+    id: "8",
+    title: "Kurtka 5",
+    price: 8000,
+    description: "Qizil rang",
+    img: "./salad.jpg",
+  },
 ];
 
 const getTotalPrice = (items = []) => {
@@ -62,7 +111,13 @@ const Product = () => {
   return (
     <div className="list">
       {products.map((item) => (
-        <ProductItem product={item} onAdd={onAdd} className="item" />
+        <ProductItem
+          product={item}
+          key={item.id}
+          onAdd={onAdd}
+          className="item"
+          salad={salad}
+        />
       ))}
     </div>
   );

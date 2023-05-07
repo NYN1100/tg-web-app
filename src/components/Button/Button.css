@@ -2,8 +2,9 @@
   padding: 10px 15px;
   display: block;
   border: none;
+  border-radius: 10px;
   outline: none;
   cursor: pointer;
-  background-color: var(--tg-theme-button-color);
+  background-color: #14a88d;
   color: var(--tg-theme-button-text-color);
 }
