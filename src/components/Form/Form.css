@@ -39,10 +39,11 @@
 }
 
 .input1 input:focus {
-  border-bottom: 2px solid black;
+  border-bottom: 2px solid var(--tg-theme-bg-color);
 }
 
 .input1 select {
+  color: var(--tg-theme-text-color);
   border: none;
   border-bottom: 1px solid rgba(0, 0, 0, 0.42);
   outline: none;
