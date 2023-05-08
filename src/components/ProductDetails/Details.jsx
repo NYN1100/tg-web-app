@@ -3,7 +3,7 @@ import "./Details.css";
 import menu1 from "./menu1.jpg";
 import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-
+import Button from "../Button/Button.jsx";
 const Details = ({ img }) => {
   return (
     <div className="details">
@@ -27,10 +27,10 @@ const Details = ({ img }) => {
         <input type="number" />
       </div>
       <div className="details3">
-        <button>Ma'lumotlarim</button>
-        <div>
-          <p>12Dona Savat</p>
-          <FontAwesomeIcon icon={faCartShopping} />
+        <Button className="button1">Ma'lumotlarim</Button>
+        <div className="shoppingCart">
+          <p>12</p>
+          <FontAwesomeIcon className="faShCart" icon={faCartShopping} />
         </div>
       </div>
     </div>
