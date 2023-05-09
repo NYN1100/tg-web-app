@@ -28,7 +28,7 @@ const Details = ({ img }) => {
       </div>
       <div className="details3">
         <Button className="button1">Ma'lumotlarim</Button>
-        <div className="shoppingCart">
+        <div className="Cart">
           <p>12</p>
           <FontAwesomeIcon className="faShCart" icon={faCartShopping} />
         </div>
