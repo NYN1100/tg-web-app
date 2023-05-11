@@ -8,6 +8,7 @@ import ProductList from "./components/ProductList/ProductList";
 import Form from "./components/Form/Form";
 import Details from "./components/ProductDetails/Details";
 import ShoppingCart from "./components/ShoppingCart/ShoppingCart";
+
 const App = () => {
   const { onToggleButton, tg } = useTelegram();
   useEffect(() => {

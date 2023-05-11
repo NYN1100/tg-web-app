@@ -4,7 +4,11 @@ import menu1 from "./menu1.jpg";
 import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Button from "../Button/Button.jsx";
+import { useParams } from "react-router-dom";
 const Details = ({ img }) => {
+  const { id } = useParams();
+  console.log(id);
+
   return (
     <div className="details">
       <div className="details1">

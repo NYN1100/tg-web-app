@@ -1,0 +1,16 @@
+{
+  "UZ": {
+    "productItem": {
+      "price": "Narx",
+      "title": "Menu",
+      "button": "Korzinkaga qushish"
+    }
+  },
+  "RU": {
+    "productItem": {
+      "price": "Цена",
+      "title": "Меню",
+      "button": "Добавить в корзину"
+    }
+  }
+}

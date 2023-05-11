@@ -1,12 +1,29 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Button from "../Button/Button";
 import { useTelegram } from "../../hooks/useTelegram";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faXmark } from "@fortawesome/free-solid-svg-icons";
 import "./Header.css";
 import logo from "./logo.png";
+
+import Translation from "../Translation/Data.json";
+
 const Header = () => {
   const { user, onClose } = useTelegram();
+
+  const [lang, setLang] = useState("UZ");
+  const [content, setContent] = useState({});
+
+  window.content = content;
+
+  useEffect(() => {
+    if (lang === "UZ") {
+      setContent(Translation.UZ);
+    } else {
+      setContent(Translation.RU);
+    }
+  });
+
   return (
     <div className="navbar">
       <div className="header">
@@ -19,9 +36,9 @@ const Header = () => {
         <div className="navbar2">
           <img src={logo} alt="logo" />
           <h3>Sog'lom Taom</h3>
-          <select>
-            <option value="uz">UZ</option>
-            <option value="ru">RU</option>
+          <select value={lang} onChange={(e) => setLang(e.target.value)}>
+            <option>UZ</option>
+            <option>RU</option>
           </select>
         </div>
       </div>

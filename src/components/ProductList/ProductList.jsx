@@ -7,35 +7,35 @@ import salad from "./salad.jpg";
 const products = [
   {
     id: "1",
-    title: "Salad",
+    title: "Menu 1",
     price: 5000,
     description: "Ko'k rang",
     img: "./salad.jpg",
   },
   {
     id: "2",
-    title: "Salad",
+    title: "Menu 1",
     price: 3000,
     description: "Oq rang",
     img: "./salad.jpg",
   },
   {
     id: "3",
-    title: "Salad",
+    title: "Menu 1",
     price: 1000,
     description: "Yashil rang",
     img: "./salad.jpg",
   },
   {
     id: "4",
-    title: "Salad",
+    title: "Menu 1",
     price: 6000,
     description: "Havorang",
     img: "./salad.jpg",
   },
   {
     id: "5",
-    title: "Salad",
+    title: "Menu 1",
     price: 7800,
     description: "Qora rang",
     img: "./salad.jpg",
@@ -49,7 +49,7 @@ const products = [
   },
   {
     id: "7",
-    title: "Salad",
+    title: "Menu 1",
     price: 5100,
     description: "Pushti rang",
     img: "./salad.jpg",
@@ -117,6 +117,7 @@ const Product = () => {
           onAdd={onAdd}
           className="item"
           salad={salad}
+          userId={item.id}
         />
       ))}
     </div>
