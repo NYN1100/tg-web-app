@@ -7,6 +7,11 @@
   width: 170px;
 }
 
+.product a {
+  text-decoration: none;
+  color: var(--tg-theme-text-color);
+}
+
 .img {
   background-image: linear-gradient(#ffffff00, #14a88d);
 }
