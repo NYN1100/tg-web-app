@@ -17,6 +17,30 @@ const purchasedProducts = [
     price: 3000,
     img: "./salad.jpg",
   },
+  {
+    id: "1",
+    title: "Menu 2",
+    price: 5000,
+    img: "./salad.jpg",
+  },
+  {
+    id: "2",
+    title: "Menu 2",
+    price: 3000,
+    img: "./salad.jpg",
+  },
+  {
+    id: "1",
+    title: "Menu 2",
+    price: 5000,
+    img: "./salad.jpg",
+  },
+  {
+    id: "2",
+    title: "Menu 2",
+    price: 3000,
+    img: "./salad.jpg",
+  },
 ];
 
 const ShoppingCart = () => {
@@ -27,10 +51,7 @@ const ShoppingCart = () => {
           <CartItem key={item.id} product={item} menu={menu} />
         ))}
       </div>
-      <div className="totalPrice">
-        <span>Umumiy narx:</span>
-        <p>400 000sum</p>
-      </div>
+
       <div>
         <div className="faTruck">
           <FontAwesomeIcon
@@ -39,6 +60,10 @@ const ShoppingCart = () => {
             style={{ color: "#14a88d" }}
           />
         </div>
+      </div>
+      <div className="totalPrice">
+        <span>Umumiy narx:</span>
+        <p>400 000sum</p>
       </div>
     </div>
   );

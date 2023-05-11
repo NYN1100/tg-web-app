@@ -1,19 +1,20 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Details.css";
 import menu1 from "./menu1.jpg";
 import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Button from "../Button/Button.jsx";
 import { useParams } from "react-router-dom";
+import AddSubs from "../AddSubs/AddSubs.jsx";
 const Details = ({ img }) => {
   const { id } = useParams();
-  console.log(id);
+  let [count, setCount] = useState(0);
 
   return (
     <div className="details">
       <div className="details1">
         <div className="img1">
-          <img src={menu1} alt="" />
+          <img src={menu1} />
         </div>
         <h2>Menu 1</h2>
         <h3>100 000 sum</h3>
@@ -28,7 +29,7 @@ const Details = ({ img }) => {
       </div>
       <div className="details2">
         <h3>Necha kun uchun buyurtma berasiz</h3>
-        <input type="number" />
+        <AddSubs count={count} setCount={setCount}></AddSubs>
       </div>
       <div className="details3">
         <Button className="button1">Ma'lumotlarim</Button>

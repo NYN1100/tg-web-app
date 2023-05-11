@@ -8,7 +8,7 @@
 .cartItem img {
   width: 160px;
   height: 130px;
-  border-radius: 0 15px;
+  border-radius: 0 20px;
   box-shadow: 10px 10px 100px #14a88d;
 }
 
@@ -25,7 +25,7 @@
   color: #14a88d;
 }
 
-.cartItem p {
+.cartItem span {
   width: fit-content;
   font-family: "Vina Sans";
   font-style: normal;
@@ -35,22 +35,4 @@
   padding: 0 20px;
   position: absolute;
   color: var(--tg-theme-text-color);
-}
-
-.cartItem div {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.cartItem div span {
-  font-family: "Roboto";
-  font-style: normal;
-  font-weight: 500;
-  font-size: 23px;
-}
-
-.cartItem div Button {
-  font-size: 1rem;
-  font-weight: 600;
-  border-radius: 0 5px;
 }

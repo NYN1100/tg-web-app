@@ -1,18 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import "./CartItem.css";
-import Button from "../Button/Button";
+import AddSubs from "../AddSubs/AddSubs";
 const CartItem = ({ menu }) => {
+  let [count, setCount] = useState(0);
   return (
     <div className="cartItem">
       <img src={menu} alt="" />
       <h3>Menu 1</h3>
       <h5>100 000 sum</h5>
-      <p>2 KUN</p>
-      <div>
-        <Button>-</Button>
-        <span>2</span>
-        <Button>+</Button>
-      </div>
+      <span>2 KUN</span>
+      <AddSubs count={count} setCount={setCount}></AddSubs>
     </div>
   );
 };

@@ -43,26 +43,15 @@
   box-shadow: 8px 8px 100px #14a88d;
 }
 
-.details2 {
-  display: flex;
-}
-
 .details2 h3 {
   font-family: "Bangers";
   font-style: normal;
   font-weight: 400;
   padding: 10px 20px;
+  text-align: center;
 }
 
-.details2 input {
-  outline: none;
-  border: none;
-  border-bottom: 5px solid #14a88d;
-  width: 70px;
-  font-size: 1.5rem;
-  font-family: "Bangers";
-  color: var(--tg-theme-text-color);
-  background-color: var(--tg-theme-bg-color);
+.details2 p {
 }
 
 .details3 {

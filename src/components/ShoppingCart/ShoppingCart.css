@@ -16,8 +16,6 @@
 .shoppingCart .totalPrice {
   padding: 30px;
   font-family: "Open Sans";
-  position: fixed;
-  bottom: 0;
 }
 .shoppingCart .totalPrice span {
   font-size: 25px;

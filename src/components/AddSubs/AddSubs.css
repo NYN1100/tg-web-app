@@ -1,0 +1,17 @@
+.IncDec {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+
+.IncDec Button {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.IncDec p {
+  font-size: 18px;
+  font-family: "Roboto ";
+  font-weight: 600;
+}
