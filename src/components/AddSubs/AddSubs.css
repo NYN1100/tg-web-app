@@ -8,10 +8,12 @@
 .IncDec Button {
   font-size: 18px;
   font-weight: 600;
+  color: var(--tg-theme-text-color);
 }
 
 .IncDec p {
+  color: var(--tg-theme-text-color);
   font-size: 18px;
-  font-family: "Roboto ";
-  font-weight: 600;
+  font-family: "Roboto";
+  font-weight: 500;
 }

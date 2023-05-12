@@ -8,7 +8,7 @@ import { useParams } from "react-router-dom";
 import AddSubs from "../AddSubs/AddSubs.jsx";
 const Details = ({ img }) => {
   const { id } = useParams();
-  let [count, setCount] = useState(0);
+  let [count1, setCount1] = useState(0);
 
   return (
     <div className="details">
@@ -29,7 +29,7 @@ const Details = ({ img }) => {
       </div>
       <div className="details2">
         <h3>Necha kun uchun buyurtma berasiz</h3>
-        <AddSubs count={count} setCount={setCount}></AddSubs>
+        <AddSubs count={count1} setCount={setCount1}></AddSubs>
       </div>
       <div className="details3">
         <Button className="button1">Ma'lumotlarim</Button>

@@ -44,14 +44,11 @@
 }
 
 .details2 h3 {
-  font-family: "Bangers";
+  font-family: "Open Sans";
   font-style: normal;
-  font-weight: 400;
+  font-weight: 600;
   padding: 10px 20px;
   text-align: center;
-}
-
-.details2 p {
 }
 
 .details3 {
