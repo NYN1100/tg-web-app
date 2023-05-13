@@ -1,14 +1,14 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import "./Details.css";
 import menu1 from "./menu1.jpg";
-import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 import Button from "../Button/Button.jsx";
 import { useParams } from "react-router-dom";
-import AddSubs from "../AddSubs/AddSubs.jsx";
+import AddSubs from "../AddSubs/AddSubs";
+
 const Details = ({ img }) => {
-  const { id } = useParams();
-  let [count1, setCount1] = useState(0);
+  let { menuId } = useParams();
+  menuId = +menuId;
 
   return (
     <div className="details">
@@ -29,14 +29,8 @@ const Details = ({ img }) => {
       </div>
       <div className="details2">
         <h3>Necha kun uchun buyurtma berasiz</h3>
-        <AddSubs count={count1} setCount={setCount1}></AddSubs>
-      </div>
-      <div className="details3">
+        <AddSubs id={menuId}></AddSubs>
         <Button className="button1">Ma'lumotlarim</Button>
-        <div className="Cart">
-          <p>12</p>
-          <FontAwesomeIcon className="faShCart" icon={faCartShopping} />
-        </div>
       </div>
     </div>
   );

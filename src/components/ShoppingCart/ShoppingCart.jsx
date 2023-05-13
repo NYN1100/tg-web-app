@@ -1,55 +1,22 @@
-import React from "react";
+import React, { useContext } from "react";
 import "./ShoppingCart.css";
 import CartItem from "../CartItem/CartItem";
-import menu from "./menu1.jpg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTruckFast } from "@fortawesome/free-solid-svg-icons";
-const purchasedProducts = [
-  {
-    id: "1",
-    title: "Menu 2",
-    price: 5000,
-    img: "./salad.jpg",
-  },
-  {
-    id: "2",
-    title: "Menu 2",
-    price: 3000,
-    img: "./salad.jpg",
-  },
-  {
-    id: "1",
-    title: "Menu 2",
-    price: 5000,
-    img: "./salad.jpg",
-  },
-  {
-    id: "2",
-    title: "Menu 2",
-    price: 3000,
-    img: "./salad.jpg",
-  },
-  {
-    id: "1",
-    title: "Menu 2",
-    price: 5000,
-    img: "./salad.jpg",
-  },
-  {
-    id: "2",
-    title: "Menu 2",
-    price: 3000,
-    img: "./salad.jpg",
-  },
-];
+import { PRODUCTS } from "../../product";
+import { ShopContext } from "../../context/shop-context";
 
 const ShoppingCart = () => {
+  const { cartItems } = useContext(ShopContext);
+  console.log(cartItems);
   return (
     <div className="shoppingCart">
       <div className="shoppingCart1">
-        {purchasedProducts.map((item) => (
-          <CartItem key={item.id} product={item} menu={menu} />
-        ))}
+        {PRODUCTS.map((item) => {
+          if (cartItems[item.id] !== 0) {
+            return <CartItem key={item.id} data={item} />;
+          }
+        })}
       </div>
 
       <div>

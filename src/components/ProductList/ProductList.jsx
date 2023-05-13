@@ -4,64 +4,7 @@ import ProductItem from "../ProductItem/ProductItem";
 import { useTelegram } from "../../hooks/useTelegram";
 import salad from "./salad.jpg";
 
-const products = [
-  {
-    id: "1",
-    title: "Menu 1",
-    price: 5000,
-    description: "Ko'k rang",
-    img: "./salad.jpg",
-  },
-  {
-    id: "2",
-    title: "Menu 1",
-    price: 3000,
-    description: "Oq rang",
-    img: "./salad.jpg",
-  },
-  {
-    id: "3",
-    title: "Menu 1",
-    price: 1000,
-    description: "Yashil rang",
-    img: "./salad.jpg",
-  },
-  {
-    id: "4",
-    title: "Menu 1",
-    price: 6000,
-    description: "Havorang",
-    img: "./salad.jpg",
-  },
-  {
-    id: "5",
-    title: "Menu 1",
-    price: 7800,
-    description: "Qora rang",
-    img: "./salad.jpg",
-  },
-  {
-    id: "6",
-    title: "Salada",
-    price: 12000,
-    description: "Ko'k rang",
-    img: "./salad.jpg",
-  },
-  {
-    id: "7",
-    title: "Menu 1",
-    price: 5100,
-    description: "Pushti rang",
-    img: "./salad.jpg",
-  },
-  {
-    id: "8",
-    title: "Salada",
-    price: 8000,
-    description: "Qizil rang",
-    img: "./salad.jpg",
-  },
-];
+import { PRODUCTS } from "../../product";
 
 const getTotalPrice = (items = []) => {
   return items.reduce((acc, item) => {
@@ -110,7 +53,7 @@ const Product = () => {
   };
   return (
     <div className="list">
-      {products.map((item) => (
+      {PRODUCTS.map((item) => (
         <ProductItem
           product={item}
           key={item.id}

@@ -1,15 +1,18 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import "./CartItem.css";
 import AddSubs from "../AddSubs/AddSubs";
-const CartItem = ({ menu }) => {
-  let [count, setCount] = useState(0);
+import { ShopContext } from "../../context/shop-context";
+const CartItem = (props) => {
+  const { id, title, price, img } = props.data;
+  const { cartItems } = useContext(ShopContext);
+
   return (
     <div className="cartItem">
-      <img src={menu} alt="" />
-      <h3>Menu 1</h3>
-      <h5>100 000 sum</h5>
-      <span>2 KUN</span>
-      <AddSubs count={count} setCount={setCount}></AddSubs>
+      <img src={img} alt="" />
+      <h3>{title}</h3>
+      <h5>{price}</h5>
+      <span>{cartItems[id]} kun</span>
+      <AddSubs id={id}> </AddSubs>
     </div>
   );
 };

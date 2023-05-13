@@ -1,25 +1,15 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import "./AddSubs.css";
 import Button from "../Button/Button";
-const AddSubs = ({ count, setCount }) => {
-  const increment = () => {
-    if (count < 30) {
-      count = count += 1;
-      setCount(count);
-    }
-  };
-  const decrement = () => {
-    if (count > 0) {
-      count = count -= 1;
-      setCount(count);
-    }
-  };
-
+import { ShopContext } from "../../context/shop-context";
+const AddSubs = ({ id }) => {
+  const { addToCart, removeFromCart, cartItems } = useContext(ShopContext);
+  const cartItemAmount = cartItems[id];
   return (
     <div className="IncDec">
-      <Button onClick={increment}>+</Button>
-      <p>{count}</p>
-      <Button onClick={decrement}>-</Button>
+      <Button onClick={() => addToCart(id)}>+</Button>
+      <p>{cartItemAmount > 0 && <>{cartItemAmount}</>}</p>
+      <Button onClick={() => removeFromCart(id)}>-</Button>
     </div>
   );
 };
