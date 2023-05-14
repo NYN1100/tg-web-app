@@ -32,7 +32,7 @@ const ProductItem = ({ product, className, salad, userId }) => {
           addToCart(userId);
         }}
       >
-        Korzinkaga qushish {cartItems[userId] > 0 && <>{cartItems[userId]}</>}
+        Savatchaga qushish {cartItems[userId] > 0 && <>{cartItems[userId]}</>}
       </Button>
     </div>
   );

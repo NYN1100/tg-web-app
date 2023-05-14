@@ -7,7 +7,7 @@ import { PRODUCTS } from "../../product";
 import { ShopContext } from "../../context/shop-context";
 
 const ShoppingCart = () => {
-  const { cartItems } = useContext(ShopContext);
+  const { cartItems, getTotalPrice } = useContext(ShopContext);
   console.log(cartItems);
   return (
     <div className="shoppingCart">
@@ -30,7 +30,7 @@ const ShoppingCart = () => {
       </div>
       <div className="totalPrice">
         <span>Umumiy narx:</span>
-        <p>400 000sum</p>
+        <p>{getTotalPrice()}</p>
       </div>
     </div>
   );

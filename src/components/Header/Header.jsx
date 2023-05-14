@@ -4,7 +4,7 @@ import { useTelegram } from "../../hooks/useTelegram";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faXmark } from "@fortawesome/free-solid-svg-icons";
 import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
-
+import { useNavigate } from "react-router-dom";
 import "./Header.css";
 import logo from "./logo.png";
 
@@ -12,6 +12,7 @@ import Translation from "../Translation/Data.json";
 import { Link } from "react-router-dom";
 
 const Header = () => {
+  const navigate = useNavigate();
   const { user, onClose } = useTelegram();
 
   const [lang, setLang] = useState("UZ");
@@ -37,10 +38,14 @@ const Header = () => {
           <span className="username">{user?.username}</span>
         </div>
         <div className="navbar2">
-          <img src={logo} alt="logo" />
-          <h3>Sog'lom Taom</h3>
+          <img src={logo} alt="logo" onClick={() => navigate("/")} />
+          <h3 onClick={() => navigate("/")}>Sog'lom Taom</h3>
           <Link to={"shoppingCart"}>
-            <FontAwesomeIcon icon={faCartShopping} style={{ color: "#ffff" }} />
+            <FontAwesomeIcon
+              className="faCart"
+              icon={faCartShopping}
+              style={{ color: "#ffff" }}
+            />
           </Link>
           <select value={lang} onChange={(e) => setLang(e.target.value)}>
             <option>UZ</option>
