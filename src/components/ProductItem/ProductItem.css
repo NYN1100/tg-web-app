@@ -34,7 +34,7 @@
 .add-btn {
   width: 100%;
   font-weight: 600;
-  background-color: whitesmoke;
+  background-color: var(--tg-theme-bg-color);
   border: 3px dotted #14a88d;
   box-shadow: 5px 5px 20px #14a88d;
 }
