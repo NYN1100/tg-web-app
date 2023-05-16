@@ -34,4 +34,15 @@
 .add-btn {
   width: 100%;
   font-weight: 600;
+  background-color: whitesmoke;
+  border: 3px dotted #14a88d;
+  box-shadow: 5px 5px 20px #14a88d;
+}
+
+.add-btn:hover {
+  background-color: #14a88d;
+}
+
+.add-btn:focus {
+  background-color: #14a88d;
 }
