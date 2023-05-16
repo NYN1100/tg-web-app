@@ -10,8 +10,6 @@ const ProductItem = ({ product, className, salad, userId }) => {
   // };
   const { addToCart, cartItems } = useContext(ShopContext);
 
-  console.log(cartItems);
-
   return (
     <div className={"product " + className}>
       <Link to={`menu/${userId}`}>
@@ -32,7 +30,7 @@ const ProductItem = ({ product, className, salad, userId }) => {
           addToCart(userId);
         }}
       >
-        Savatchaga qushish {cartItems[userId] > 0 && <>{cartItems[userId]}</>}
+        Savatchaga qushish {cartItems[userId] > 0 && <>({cartItems[userId]})</>}
       </Button>
     </div>
   );

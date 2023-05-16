@@ -34,16 +34,7 @@
 .add-btn {
   width: 100%;
   font-weight: 600;
-  color: var(--tg-theme-text-color);
-  background-color: var(--tg-theme-bg-color);
+
   border: 3px solid #14a88d;
   box-shadow: 5px 5px 20px #14a88d;
-}
-
-.add-btn:hover {
-  background-color: #14a88d;
-}
-
-.add-btn:focus {
-  background-color: #14a88d;
 }
