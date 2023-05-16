@@ -13,26 +13,6 @@
   align-items: center;
 }
 
-.shoppingCart .totalPrice {
-  padding: 30px;
-  font-family: "Open Sans";
-}
-.shoppingCart .totalPrice span {
-  font-size: 25px;
-  font-weight: 400;
-  font-family: "Roboto";
-}
-
-.shoppingCart .totalPrice p {
-  font-size: 20px;
-  text-align: center;
-  background-color: #40ff00;
-  border-radius: 10px;
-  padding: 10px;
-  color: whitesmoke;
-  box-shadow: 1px 1px 20px #40ff00;
-}
-
 .faTruck {
   border: 2px solid #14a88d;
   padding: 10px;
@@ -46,4 +26,33 @@
   font-weight: 700;
   font-size: 20px;
   color: var(--tg-theme-text-color);
+}
+
+.Purchase {
+  display: flex;
+  gap: 100px;
+  padding: 10px;
+  align-items: center;
+  border: 5px solid #14a88d;
+  border-radius: 10px;
+  background-color: #14a88d;
+}
+
+.Purchase .totalPrice span {
+  font-size: 18px;
+  color: var(--tg-theme-hint-color);
+  font-family: "Roboto";
+}
+
+.Purchase .totalPrice div {
+  font-size: 1.5rem;
+  font-family: "Vina Sans";
+  color: var(--tg-theme-text-color);
+}
+
+.Purchase Button {
+  font-size: 1.3rem;
+  border: 3px solid #ffff;
+  border-radius: 10px;
+  background-color: aquamarine;
 }

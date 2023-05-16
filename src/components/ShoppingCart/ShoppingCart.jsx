@@ -5,6 +5,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTruckFast } from "@fortawesome/free-solid-svg-icons";
 import { PRODUCTS } from "../../product";
 import { ShopContext } from "../../context/shop-context";
+import Button from "../Button/Button";
 
 const ShoppingCart = () => {
   const { cartItems, getTotalPrice } = useContext(ShopContext);
@@ -28,9 +29,14 @@ const ShoppingCart = () => {
           />
         </div>
       </div>
-      <div className="totalPrice">
-        <span>Umumiy narx:</span>
-        <p>{getTotalPrice()}</p>
+      <div className="Purchase">
+        <div className="totalPrice">
+          <span>Umumiy narx:</span>
+          <div>{getTotalPrice()} UZS</div>
+        </div>
+        <div>
+          <Button>Buyurtma berish</Button>
+        </div>
       </div>
     </div>
   );
