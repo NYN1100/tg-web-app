@@ -19,7 +19,7 @@ const Details = () => {
           <img src={pruduct.img} />
         </div>
         <h2>{pruduct.title}</h2>
-        <h3>{pruduct.price} sum</h3>
+        <h3>{pruduct.price} UZS</h3>
         <p>{pruduct.description}</p>
       </div>
       <div className="details2">

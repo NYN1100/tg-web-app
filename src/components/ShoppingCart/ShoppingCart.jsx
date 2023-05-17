@@ -9,6 +9,7 @@ import Button from "../Button/Button";
 
 const ShoppingCart = () => {
   const { cartItems, getTotalPrice } = useContext(ShopContext);
+  const totalAmount = getTotalPrice();
   console.log(cartItems);
   return (
     <div className="shoppingCart">
@@ -19,7 +20,6 @@ const ShoppingCart = () => {
           }
         })}
       </div>
-
       <div>
         <div className="faTruck">
           <FontAwesomeIcon
@@ -29,15 +29,19 @@ const ShoppingCart = () => {
           />
         </div>
       </div>
-      <div className="Purchase">
-        <div className="totalPrice">
-          <span>Umumiy narx:</span>
-          <div>{getTotalPrice()} UZS</div>
+      {totalAmount > 0 ? (
+        <div className="Purchase">
+          <div className="totalPrice">
+            <span>Umumiy narx:</span>
+            <div>{getTotalPrice()} UZS</div>
+          </div>
+          <div>
+            <Button>Buyurtma berish</Button>
+          </div>
         </div>
-        <div>
-          <Button>Buyurtma berish</Button>
-        </div>
-      </div>
+      ) : (
+        <h1 style={{ fontFamily: "Open Sans" }}>Savatchangiz bo'sh</h1>
+      )}
     </div>
   );
 };

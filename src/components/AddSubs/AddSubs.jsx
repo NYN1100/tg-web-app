@@ -7,9 +7,9 @@ const AddSubs = ({ id }) => {
   const cartItemAmount = cartItems[id];
   return (
     <div className="IncDec">
-      <Button onClick={() => addToCart(id)}>+</Button>
-      <p>{cartItemAmount > 0 && <>{cartItemAmount}</>}</p>
       <Button onClick={() => removeFromCart(id)}>-</Button>
+      <p>{cartItemAmount > 0 && <>{cartItemAmount}</>}</p>
+      <Button onClick={() => addToCart(id)}>+</Button>
     </div>
   );
 };

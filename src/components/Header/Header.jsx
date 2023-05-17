@@ -32,9 +32,6 @@ const Header = () => {
     <div className="navbar">
       <div className="header">
         <div className="navbar1">
-          <Button onClick={onClose}>
-            <FontAwesomeIcon className="iconX" icon={faXmark} />
-          </Button>
           <span className="username">{user?.username}</span>
         </div>
         <div className="navbar2">
