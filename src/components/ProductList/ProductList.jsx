@@ -53,9 +53,8 @@ const Product = () => {
   //     });
   //   }
   // };
-
-  for (const item in cartItems) {
-    if (cartItems[item - 1] > 0) {
+  const showBtn = (id) => {
+    if (cartItems[id] > 0) {
       tg.MainButton.show();
       tg.MainButton.setParams({
         text: "Korzinka",
@@ -63,7 +62,7 @@ const Product = () => {
     } else {
       tg.MainButton.hide();
     }
-  }
+  };
 
   return (
     <div className="list">
@@ -74,6 +73,7 @@ const Product = () => {
           className="item"
           salad={salad}
           userId={item.id}
+          onAdd={showBtn}
         />
       ))}
     </div>
