@@ -6,8 +6,10 @@ import { faTruckFast } from "@fortawesome/free-solid-svg-icons";
 import { PRODUCTS } from "../../product";
 import { ShopContext } from "../../context/shop-context";
 import Button from "../Button/Button";
+import { useNavigate } from "react-router-dom";
 
 const ShoppingCart = () => {
+  const navigate = useNavigate();
   const { cartItems, getTotalPrice } = useContext(ShopContext);
   const totalAmount = getTotalPrice();
   console.log(cartItems);
@@ -36,7 +38,7 @@ const ShoppingCart = () => {
             <div>{getTotalPrice()} UZS</div>
           </div>
           <div>
-            <Button>Buyurtma berish</Button>
+            <Button onClick={() => navigate("/form")}>Buyurtma berish</Button>
           </div>
         </div>
       ) : (
