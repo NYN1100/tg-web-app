@@ -55,13 +55,13 @@ const Product = () => {
   // };
 
   for (const item in cartItems) {
-    if (cartItems[item] > 0) {
+    if (cartItems[item - 1] > 0) {
       tg.MainButton.show();
-    } else {
-      tg.MainButton.hide();
       tg.MainButton.setParams({
         text: "Korzinka",
       });
+    } else {
+      tg.MainButton.hide();
     }
   }
 
