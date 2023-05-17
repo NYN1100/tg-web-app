@@ -27,8 +27,8 @@ const ProductItem = ({ product, className, salad, userId, onAdd }) => {
       <Button
         className="add-btn"
         onClick={() => {
-          addToCart(userId);
           onAddHandler();
+          addToCart(userId);
         }}
       >
         Savatchaga qushish {cartItems[userId] > 0 && <>({cartItems[userId]})</>}
