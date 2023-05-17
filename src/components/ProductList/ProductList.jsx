@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import "./ProductList.css";
 import ProductItem from "../ProductItem/ProductItem";
 import { useTelegram } from "../../hooks/useTelegram";
@@ -6,6 +6,7 @@ import salad from "./salad.jpg";
 
 import { PRODUCTS } from "../../product";
 import { ShopContext } from "../../context/shop-context";
+import { useNavigate } from "react-router-dom";
 
 // const getTotalPrice = (items = []) => {
 //   return items.reduce((acc, item) => {
@@ -14,9 +15,10 @@ import { ShopContext } from "../../context/shop-context";
 // };
 
 const Product = () => {
-  const { cartItems } = useContext(ShopContext);
+  const { getTotalPrice } = useContext(ShopContext);
   // const [addedItems, setAddedItems] = useState([]);
   const { tg } = useTelegram();
+  const navigate = useNavigate();
 
   // const onSendData = useCallback(() => {
   //   const data = {
@@ -53,16 +55,25 @@ const Product = () => {
   //     });
   //   }
   // };
-  const showBtn = (id) => {
-    if (cartItems[id] > 0) {
+  // const showBtn = (id) => {
+  //   if (cartItems[id] > 0) {
+  //     tg.MainButton.show();
+  //     tg.MainButton.setParams({
+  //       text: "Korzinka",
+  //     });
+  //   } else {
+  //     tg.MainButton.hide();
+  //   }
+  // };
+
+  useEffect(() => {
+    if (getTotalPrice() > 0) {
       tg.MainButton.show();
-      tg.MainButton.setParams({
-        text: "Korzinka",
-      });
+      tg.MainButton.onClick(() => navigate("/shoppingCart"));
     } else {
       tg.MainButton.hide();
     }
-  };
+  });
 
   return (
     <div className="list">
@@ -73,7 +84,6 @@ const Product = () => {
           className="item"
           salad={salad}
           userId={item.id}
-          onAdd={showBtn}
         />
       ))}
     </div>

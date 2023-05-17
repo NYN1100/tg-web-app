@@ -5,9 +5,6 @@ import { Link, useParams } from "react-router-dom";
 import { ShopContext } from "../../context/shop-context";
 
 const ProductItem = ({ product, className, salad, userId, onAdd }) => {
-  const onAddHandler = () => {
-    onAdd(userId);
-  };
   const { addToCart, cartItems } = useContext(ShopContext);
 
   return (
@@ -27,7 +24,6 @@ const ProductItem = ({ product, className, salad, userId, onAdd }) => {
       <Button
         className="add-btn"
         onClick={() => {
-          onAddHandler();
           addToCart(userId);
         }}
       >
