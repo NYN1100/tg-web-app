@@ -1,7 +1,12 @@
 .list {
   display: flex;
+  flex-direction: column;
+}
+.list1 {
+  display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  padding-bottom: 10px;
 }
 
 .item {
@@ -9,11 +14,14 @@
   margin-bottom: 10px;
 }
 
-.list #button {
-  padding: 10px 200px;
-  position: sticky;
-  font-size: 1rem;
+.list2 {
+  background-color: rgb(27, 227, 227);
+  font-size: 1.2rem;
   font-family: "Open Sans";
   font-weight: 600;
-  background-color: aqua;
+  text-align: center;
+  padding: 10px;
+  border-radius: 5px;
+  position: sticky;
+  bottom: 0;
 }

@@ -75,20 +75,20 @@ const Product = () => {
 
   return (
     <div className="list">
-      {PRODUCTS.map((item) => (
-        <ProductItem
-          product={item}
-          key={item.id}
-          className="item"
-          salad={salad}
-          userId={item.id}
-        />
-      ))}
+      <div className="list1">
+        {PRODUCTS.map((item) => (
+          <ProductItem
+            product={item}
+            key={item.id}
+            className="item"
+            salad={salad}
+            userId={item.id}
+          />
+        ))}
+      </div>
       {getTotalPrice() > 0 ? (
-        <div>
-          <Button id="button" onClick={() => showBtn()}>
-            Savatcha
-          </Button>
+        <div onClick={() => navigate("/shoppingCart")} className="list2">
+          Savatcha
         </div>
       ) : (
         <></>
