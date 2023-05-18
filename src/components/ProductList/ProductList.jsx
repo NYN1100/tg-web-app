@@ -66,17 +66,15 @@ const Product = () => {
   //   }
   // };
 
-  useEffect(() => {
-    if (getTotalPrice() > 0) {
-      tg.MainButton.show();
-      tg.MainButton.onClick(() => navigate("/shoppingCart"));
-      tg.MainButton.setParams({
-        text: "Savatcha",
-      });
-    } else {
-      tg.MainButton.hide();
-    }
-  });
+  if (getTotalPrice() > 0) {
+    tg.MainButton.show();
+    tg.MainButton.onClick(() => navigate("/shoppingCart"));
+    tg.MainButton.setParams({
+      text: "Savatcha",
+    });
+  } else {
+    tg.MainButton.hide();
+  }
 
   return (
     <div className="list">
