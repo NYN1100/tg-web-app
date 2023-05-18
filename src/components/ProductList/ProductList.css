@@ -8,3 +8,12 @@
   margin-right: 10px;
   margin-bottom: 10px;
 }
+
+.list #button {
+  padding: 10px 200px;
+  position: sticky;
+  font-size: 1rem;
+  font-family: "Open Sans";
+  font-weight: 600;
+  background-color: aqua;
+}

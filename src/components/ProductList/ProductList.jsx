@@ -7,6 +7,7 @@ import salad from "./salad.jpg";
 import { PRODUCTS } from "../../product";
 import { ShopContext } from "../../context/shop-context";
 import { useNavigate } from "react-router-dom";
+import Button from "../Button/Button";
 
 // const getTotalPrice = (items = []) => {
 //   return items.reduce((acc, item) => {
@@ -65,16 +66,12 @@ const Product = () => {
   //     tg.MainButton.hide();
   //   }
   // };
-
-  if (getTotalPrice() > 0) {
-    tg.MainButton.show();
-    tg.MainButton.setParams({
-      text: "Savatcha",
-    });
-    navigate("/shoppingCart");
-  } else {
-    tg.MainButton.hide();
-  }
+  const showBtn = () => {
+    if (getTotalPrice() > 0) {
+      navigate("/shoppingCart");
+    } else {
+    }
+  };
 
   return (
     <div className="list">
@@ -87,6 +84,15 @@ const Product = () => {
           userId={item.id}
         />
       ))}
+      {getTotalPrice() > 0 ? (
+        <div>
+          <Button id="button" onClick={() => showBtn()}>
+            Savatcha
+          </Button>
+        </div>
+      ) : (
+        <></>
+      )}
     </div>
   );
 };
