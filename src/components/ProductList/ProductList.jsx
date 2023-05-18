@@ -66,24 +66,15 @@ const Product = () => {
   //   }
   // };
 
-  const showBtn = () => {
-    if (getTotalPrice() > 0) {
-      tg.MainButton.show();
-      tg.MainButton.setParams({
-        text: "Savatcha",
-      });
-      navigate("/shoppingCart");
-    } else {
-      tg.MainButton.hide();
-    }
-  };
-
-  useEffect(() => {
-    Telegram.WebApp.onEvent("mainButtonClicked", showBtn);
-    return () => {
-      Telegram.WebApp.offEvent("mainButtonClicked", showBtn);
-    };
-  }, [showBtn]);
+  if (getTotalPrice() > 0) {
+    tg.MainButton.show();
+    tg.MainButton.setParams({
+      text: "Savatcha",
+    });
+    navigate("/shoppingCart");
+  } else {
+    tg.MainButton.hide();
+  }
 
   return (
     <div className="list">
