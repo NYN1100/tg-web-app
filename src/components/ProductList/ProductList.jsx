@@ -66,12 +66,6 @@ const Product = () => {
   //     tg.MainButton.hide();
   //   }
   // };
-  const showBtn = () => {
-    if (getTotalPrice() > 0) {
-      navigate("/shoppingCart");
-    } else {
-    }
-  };
 
   return (
     <div className="list">

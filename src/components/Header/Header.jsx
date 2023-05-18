@@ -37,13 +37,14 @@ const Header = () => {
         <div className="navbar2">
           <img src={logo} alt="logo" onClick={() => navigate("/")} />
           <h3 onClick={() => navigate("/")}>Sog'lom Taom</h3>
-          <Link to={"shoppingCart"}>
-            <FontAwesomeIcon
-              className="faCart"
-              icon={faCartShopping}
-              style={{ color: "#ffff" }}
-            />
-          </Link>
+
+          <FontAwesomeIcon
+            onClick={() => navigate("/shoppingCart")}
+            className="faCart"
+            icon={faCartShopping}
+            style={{ color: "#ffff" }}
+          />
+
           <select value={lang} onChange={(e) => setLang(e.target.value)}>
             <option>UZ</option>
             <option>RU</option>
