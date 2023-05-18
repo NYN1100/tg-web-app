@@ -68,13 +68,20 @@ const Product = () => {
 
   if (getTotalPrice() > 0) {
     tg.MainButton.show();
-    tg.MainButton.onClick(() => navigate("/shoppingCart"));
+
     tg.MainButton.setParams({
       text: "Savatcha",
     });
   } else {
     tg.MainButton.hide();
   }
+
+  useEffect(() => {
+    tg.MainButton.onEvent(() => navigate("/shoppingCart"));
+    return () => {
+      tg.MainButton.offEvent(() => navigate("/shoppingCart"));
+    };
+  });
 
   return (
     <div className="list">
