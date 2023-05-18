@@ -30,8 +30,8 @@
 
 .Purchase {
   display: flex;
-  gap: 100px;
-  padding: 5px;
+  gap: 50px;
+  padding: 20px;
   align-items: center;
   border: 5px solid #14a88d;
   border-radius: 10px;
@@ -56,8 +56,9 @@
 }
 
 .Purchase Button {
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   border-radius: 10px;
+  font-weight: 600;
   background-color: rgb(28, 205, 146);
   box-shadow: 5px 5px 30px rgb(28, 205, 146);
 }
