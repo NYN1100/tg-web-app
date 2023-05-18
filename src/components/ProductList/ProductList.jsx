@@ -82,7 +82,7 @@ const Product = () => {
     return () => {
       tg.MainButton.offClick(() => navigate("/shoppinCart"));
     };
-  });
+  }, [showBtn]);
 
   return (
     <div className="list">
