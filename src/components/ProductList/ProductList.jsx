@@ -66,20 +66,21 @@ const Product = () => {
   //   }
   // };
 
-  if (getTotalPrice() > 0) {
-    tg.MainButton.show();
-
-    tg.MainButton.setParams({
-      text: "Savatcha",
-    });
-  } else {
-    tg.MainButton.hide();
-  }
+  const showBtn = () => {
+    if (getTotalPrice() > 0) {
+      tg.MainButton.show();
+      tg.MainButton.setParams({
+        text: "Savatcha",
+      });
+    } else {
+      tg.MainButton.hide();
+    }
+  };
 
   useEffect(() => {
-    tg.MainButton.onEvent(() => navigate("/shoppingCart"));
+    tg.MainButton.onClick(() => navigate("/shoppingCart"));
     return () => {
-      tg.MainButton.offEvent(() => navigate("/shoppingCart"));
+      tg.MainButton.offClick(() => navigate("/shoppinCart"));
     };
   });
 
