@@ -79,9 +79,9 @@ const Product = () => {
   };
 
   useEffect(() => {
-    tg.MainButton.onClick(() => showBtn);
+    Telegram.WebApp.onEvent("mainButtonClicked", showBtn);
     return () => {
-      tg.MainButton.offClick(() => showBtn);
+      Telegram.WebApp.offEvent("mainButtonClicked", showBtn);
     };
   }, [showBtn]);
 
