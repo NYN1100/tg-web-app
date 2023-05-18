@@ -72,15 +72,16 @@ const Product = () => {
       tg.MainButton.setParams({
         text: "Savatcha",
       });
+      navigate("/shoppingCart");
     } else {
       tg.MainButton.hide();
     }
   };
 
   useEffect(() => {
-    tg.MainButton.onClick(() => navigate("/shoppingCart"));
+    tg.MainButton.onClick(() => showBtn);
     return () => {
-      tg.MainButton.offClick(() => navigate("/shoppinCart"));
+      tg.MainButton.offClick(() => showBtn);
     };
   }, [showBtn]);
 
